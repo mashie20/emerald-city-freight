@@ -1,4 +1,4 @@
-// script.js
+// Main.js
 
 // Initialize Leaflet map
 var map = L.map('map').setView([47.6062, -122.3321], 10);
