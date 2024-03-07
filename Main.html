@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emerald City Freight</title>
+  <link rel="stylesheet" href="public/css/style.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <header>
+    <h1>Welcome to Emerald City Freight</h1>
+    <!-- Add navigation links here -->
+  </header>
+
+  <main>
+    <section id="map">
+      <!-- Leaflet map goes here -->
+    </section>
+
+    <section id="content">
+      <h2>Domain Information</h2>
+      <form id="domainForm">
+        <label for="domainInput">Domain Name:</label>
+        <input type="text" id="domainInput" name="domainInput">
+        <button type="submit">Get Info</button>
+      </form>
+      <div id="domainContent"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Emerald City Freight</p>
+  </footer>
+
+  <script src="public/js/script.js"></script>
+  <!-- Leaflet JavaScript -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</body>
+</html>
