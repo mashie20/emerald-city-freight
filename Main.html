@@ -3,39 +3,427 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Emerald City Freight</title>
-  <link rel="stylesheet" href="public/css/Main.css">
+  <meta name="description" content="Emerald City Freight - Premium freight delivery service offering real-time shipment tracking, competitive pricing, and industry-leading logistics solutions. Experience seamless navigation and professional service.">
+  <meta name="keywords" content="freight, logistics, shipping, delivery, tracking, cargo, transportation">
+  <meta name="author" content="Emerald City Freight">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Emerald City Freight - Premium Freight Logistics">
+  <meta property="og:description" content="Industry-leading freight delivery with real-time tracking and competitive pricing">
+  <meta property="og:type" content="website">
+  
+  <title>Emerald City Freight - Premium Logistics Solutions</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="Main.css">
+  
   <!-- Leaflet CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to Emerald City Freight</h1>
-    <!-- Add navigation links here -->
+  <!-- NAVIGATION -->
+  <header id="header">
+    <nav>
+      <div class="logo">Emerald City Freight</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#tracking">Track Shipment</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#quote">Get Quote</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#track-now" class="btn btn-ghost">Track Now</a></li>
+      </ul>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle mobile menu">
+        ☰
+      </button>
+    </nav>
   </header>
 
-  <main>
-    <section id="map">
-      <!-- Leaflet map goes here -->
-    </section>
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1 class="fade-in">Your Cargo, Our Priority</h1>
+      <p class="hero-subtitle fade-in">Experience world-class freight logistics with real-time tracking, competitive pricing, and industry-leading reliability. From local deliveries to international shipping, we deliver excellence.</p>
+      <div class="hero-cta fade-in">
+        <a href="#tracking" class="btn btn-primary">Track Shipment</a>
+        <a href="#quote" class="btn btn-secondary">Get Instant Quote</a>
+      </div>
+      
+      <!-- Stats -->
+      <div class="stats-grid fade-in">
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-count="50000">0</div>
+          <div class="stat-label">Shipments Delivered</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-count="98">0</div>
+          <div class="stat-label">% On-Time Delivery</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-count="24">0</div>
+          <div class="stat-label">Hour Support</div>
+        </div>
+        <div class="stat-card glass-card">
+          <div class="stat-number" data-count="150">0</div>
+          <div class="stat-label">Global Locations</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="content">
-      <h2>Domain Information</h2>
-      <form id="domainForm">
-        <label for="domainInput">Domain Name:</label>
-        <input type="text" id="domainInput" name="domainInput">
-        <button type="submit">Get Info</button>
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <div class="section-header fade-in">
+      <div class="section-subtitle">What We Offer</div>
+      <h2>Premium Freight Services</h2>
+      <p>Comprehensive logistics solutions tailored to your business needs</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🚛</div>
+        <h3 class="service-title">Ground Freight</h3>
+        <p>Fast, reliable ground transportation for all cargo sizes with real-time GPS tracking and flexible scheduling options.</p>
+        <ul class="service-list">
+          <li>LTL & FTL services</li>
+          <li>Expedited delivery</li>
+          <li>Temperature controlled</li>
+          <li>White glove service</li>
+        </ul>
+      </div>
+      
+      <div class="service-card fade-in">
+        <div class="service-icon">✈️</div>
+        <h3 class="service-title">Air Freight</h3>
+        <p>Express air shipping for time-sensitive cargo with priority handling and global network coverage.</p>
+        <ul class="service-list">
+          <li>Next-day delivery</li>
+          <li>International shipping</li>
+          <li>Customs clearance</li>
+          <li>Priority handling</li>
+        </ul>
+      </div>
+      
+      <div class="service-card fade-in">
+        <div class="service-icon">🚢</div>
+        <h3 class="service-title">Ocean Freight</h3>
+        <p>Cost-effective ocean shipping solutions for large cargo volumes with comprehensive port-to-port services.</p>
+        <ul class="service-list">
+          <li>FCL & LCL options</li>
+          <li>Door-to-door delivery</li>
+          <li>Container tracking</li>
+          <li>Competitive rates</li>
+        </ul>
+      </div>
+      
+      <div class="service-card fade-in">
+        <div class="service-icon">📦</div>
+        <h3 class="service-title">Warehousing</h3>
+        <p>Secure storage solutions with state-of-the-art inventory management and distribution services.</p>
+        <ul class="service-list">
+          <li>Climate controlled</li>
+          <li>24/7 security</li>
+          <li>Inventory management</li>
+          <li>Pick & pack services</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKING SECTION -->
+  <section id="tracking">
+    <div class="section-header fade-in">
+      <div class="section-subtitle">Real-Time Updates</div>
+      <h2>Track Your Shipment</h2>
+      <p>Enter your tracking number for instant shipment status and location</p>
+    </div>
+    
+    <div class="tracking-container fade-in">
+      <form id="trackingForm" class="tracking-form">
+        <input 
+          type="text" 
+          id="trackingInput" 
+          class="tracking-input" 
+          placeholder="Enter tracking number (e.g., ECF123456789)"
+          aria-label="Tracking number input"
+          required
+        >
+        <button type="submit" class="btn btn-ghost">Track</button>
       </form>
-      <div id="domainContent"></div>
-    </section>
-  </main>
+      
+      <div id="trackingResult" class="tracking-result">
+        <h3 id="trackingNumber"></h3>
+        <p id="trackingStatus"></p>
+        <p id="trackingLocation"></p>
+        <p id="trackingETA"></p>
+      </div>
+    </div>
+    
+    <!-- Interactive Map -->
+    <div class="fade-in" style="margin-top: var(--space-xl);">
+      <div id="map"></div>
+    </div>
+  </section>
 
+  <!-- FEATURES SECTION -->
+  <section id="features">
+    <div class="section-header fade-in">
+      <div class="section-subtitle">Why Choose Us</div>
+      <h2>Industry-Leading Features</h2>
+      <p>Technology and service that puts us ahead of the competition</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">⚡</div>
+        <h3 class="feature-title">Real-Time Tracking</h3>
+        <p class="feature-description">Monitor your shipments 24/7 with GPS-enabled tracking and instant notifications for every milestone.</p>
+      </div>
+      
+      <div class="feature-card fade-in">
+        <div class="feature-icon">💰</div>
+        <h3 class="feature-title">Competitive Pricing</h3>
+        <p class="feature-description">Transparent pricing with no hidden fees. Get instant quotes and volume discounts for regular shipments.</p>
+      </div>
+      
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🌍</div>
+        <h3 class="feature-title">Global Network</h3>
+        <p class="feature-description">Access to 150+ locations worldwide with seamless international shipping and customs support.</p>
+      </div>
+      
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🔒</div>
+        <h3 class="feature-title">Cargo Insurance</h3>
+        <p class="feature-description">Comprehensive insurance coverage for all shipments with easy claims processing and full protection.</p>
+      </div>
+      
+      <div class="feature-card fade-in">
+        <div class="feature-icon">📱</div>
+        <h3 class="feature-title">Mobile App</h3>
+        <p class="feature-description">Manage shipments on the go with our intuitive mobile app for iOS and Android.</p>
+      </div>
+      
+      <div class="feature-card fade-in">
+        <div class="feature-icon">🎯</div>
+        <h3 class="feature-title">Route Optimization</h3>
+        <p class="feature-description">AI-powered route planning ensures fastest delivery times and reduced costs for every shipment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE CALCULATOR SECTION -->
+  <section id="quote">
+    <div class="section-header fade-in">
+      <div class="section-subtitle">Instant Pricing</div>
+      <h2>Get Your Quote</h2>
+      <p>Calculate shipping costs instantly with our smart quote calculator</p>
+    </div>
+    
+    <div class="calculator-container fade-in">
+      <form id="quoteForm" class="calculator-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="origin" class="form-label">Origin</label>
+            <input type="text" id="origin" class="form-input" placeholder="City or ZIP code" required>
+          </div>
+          <div class="form-group">
+            <label for="destination" class="form-label">Destination</label>
+            <input type="text" id="destination" class="form-input" placeholder="City or ZIP code" required>
+          </div>
+        </div>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label for="weight" class="form-label">Weight (lbs)</label>
+            <input type="number" id="weight" class="form-input" placeholder="0" min="1" required>
+          </div>
+          <div class="form-group">
+            <label for="service" class="form-label">Service Type</label>
+            <select id="service" class="form-select" required>
+              <option value="">Select service</option>
+              <option value="ground">Ground Freight</option>
+              <option value="air">Air Freight</option>
+              <option value="ocean">Ocean Freight</option>
+              <option value="expedited">Expedited</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="cargo" class="form-label">Cargo Type</label>
+          <select id="cargo" class="form-select" required>
+            <option value="">Select cargo type</option>
+            <option value="general">General Cargo</option>
+            <option value="fragile">Fragile Items</option>
+            <option value="perishable">Perishable Goods</option>
+            <option value="hazardous">Hazardous Materials</option>
+          </select>
+        </div>
+        
+        <button type="submit" class="btn btn-ghost" style="width: 100%; margin-top: var(--space-md);">
+          Calculate Quote
+        </button>
+      </form>
+      
+      <div id="quoteResult" class="quote-result">
+        <h3>Your Estimated Quote</h3>
+        <div class="quote-amount" id="quoteAmount">$0</div>
+        <p>Delivery time: <span id="deliveryTime">-</span></p>
+        <p style="margin-top: var(--space-md); font-size: 0.9rem; opacity: 0.9;">
+          *Final price may vary based on actual dimensions and special requirements
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials">
+    <div class="section-header fade-in">
+      <div class="section-subtitle">Client Success</div>
+      <h2>What Our Clients Say</h2>
+      <p>Trusted by thousands of businesses worldwide</p>
+    </div>
+    
+    <div class="testimonials-container">
+      <div class="grid grid-3">
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-text">"Emerald City Freight transformed our logistics. Real-time tracking and competitive rates have significantly reduced our shipping costs. Highly recommended!"</p>
+          <div class="testimonial-author">Sarah Johnson</div>
+          <div class="testimonial-role">Operations Manager, TechCorp</div>
+        </div>
+        
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-text">"The best freight service we've ever used. Their customer support is outstanding, and the tracking system is incredibly accurate. Our go-to logistics partner."</p>
+          <div class="testimonial-author">Michael Chen</div>
+          <div class="testimonial-role">Supply Chain Director, Global Trade Inc</div>
+        </div>
+        
+        <div class="testimonial-card fade-in">
+          <p class="testimonial-text">"Switching to Emerald City Freight was the best decision for our business. Fast delivery, transparent pricing, and professional service every time."</p>
+          <div class="testimonial-author">Emily Rodriguez</div>
+          <div class="testimonial-role">CEO, EcoProducts Ltd</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <div class="cta-section fade-in" id="track-now">
+    <div class="cta-content">
+      <h2>Ready to Ship with Confidence?</h2>
+      <p>Join thousands of satisfied customers who trust Emerald City Freight for their logistics needs</p>
+      <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap; margin-top: var(--space-xl);">
+        <a href="#quote" class="btn btn-primary">Get Free Quote</a>
+        <a href="#tracking" class="btn btn-secondary">Track Shipment</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact">
+    <div class="section-header fade-in">
+      <div class="section-subtitle">Get In Touch</div>
+      <h2>Contact Us</h2>
+      <p>Have questions? Our team is here to help 24/7</p>
+    </div>
+    
+    <div class="grid grid-2">
+      <div class="card fade-in">
+        <h3>Send Us a Message</h3>
+        <form id="contactForm" style="margin-top: var(--space-md);">
+          <div class="form-group">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" id="name" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-input" required>
+          </div>
+          <div class="form-group">
+            <label for="phone" class="form-label">Phone</label>
+            <input type="tel" id="phone" class="form-input">
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" class="form-input" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-ghost" style="width: 100%;">Send Message</button>
+        </form>
+      </div>
+      
+      <div class="card fade-in">
+        <h3>Contact Information</h3>
+        <div style="margin-top: var(--space-md); line-height: 2;">
+          <p><strong>📍 Address:</strong><br>123 Freight Avenue<br>Seattle, WA 98101</p>
+          <p><strong>📞 Phone:</strong><br>(555) 123-4567</p>
+          <p><strong>📧 Email:</strong><br>support@emeraldcityfreight.com</p>
+          <p><strong>🕐 Hours:</strong><br>24/7 Customer Support</p>
+        </div>
+        <div style="margin-top: var(--space-lg);">
+          <h4>Follow Us</h4>
+          <div style="display: flex; gap: var(--space-md); margin-top: var(--space-sm);">
+            <a href="#" class="btn btn-ghost" aria-label="Facebook">Facebook</a>
+            <a href="#" class="btn btn-ghost" aria-label="Twitter">Twitter</a>
+            <a href="#" class="btn btn-ghost" aria-label="LinkedIn">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 Emerald City Freight</p>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3 class="text-gradient">Emerald City Freight</h3>
+        <p>Your trusted partner for premium freight logistics solutions worldwide.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="#services">Ground Freight</a></li>
+          <li><a href="#services">Air Freight</a></li>
+          <li><a href="#services">Ocean Freight</a></li>
+          <li><a href="#services">Warehousing</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Company</h3>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#careers">Careers</a></li>
+          <li><a href="#press">Press</a></li>
+          <li><a href="#partners">Partners</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h3>Support</h3>
+        <ul class="footer-links">
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; 2024 Emerald City Freight. All rights reserved. Designed for excellence.</p>
+    </div>
   </footer>
 
-  <script src="public/js/Main.js"></script>
-  <!-- Leaflet JavaScript -->
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="Main.js"></script>
 </body>
 </html>
