@@ -1,0 +1,55 @@
+{
+  "name": "Emerald City Freight",
+  "short_name": "ECF",
+  "description": "Premium freight logistics platform with real-time tracking and instant quotes",
+  "start_url": "/Main.html",
+  "display": "standalone",
+  "background_color": "#064e3b",
+  "theme_color": "#059669",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "logistics", "productivity"],
+  "screenshots": [
+    {
+      "src": "screenshot-mobile.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "screenshot-desktop.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Track Shipment",
+      "short_name": "Track",
+      "description": "Track your shipment",
+      "url": "/Main.html#tracking",
+      "icons": [{ "src": "icon-track.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Get Quote",
+      "short_name": "Quote",
+      "description": "Calculate shipping quote",
+      "url": "/Main.html#quote",
+      "icons": [{ "src": "icon-quote.png", "sizes": "96x96" }]
+    }
+  ]
+}
